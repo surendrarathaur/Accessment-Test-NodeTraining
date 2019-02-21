@@ -1,0 +1,46 @@
+
+RESTful API
+
+An example RESTful API built on Nodejs, Express, Mongoose, JWT
+
+Features:
+
+RESTful routing
+Models with proper relationships
+JWT Authentication
+RESTful errors
+
+Routes List:
+
+Users:
+
+Method                  Action
+GET/HEAD	      http://localhost:3000/users/getUsers
+POST    	      http://localhost:3000/users/getUser
+POST	          http://localhost:3000/users/createUser
+PUT	              http://localhost:3000/users/updateUser
+DELETE	          http://localhost:3000/users/deleteUser
+POST	          http://localhost:3000/users/getUserComments
+POST    	      http://localhost:3000/users/getUserPosts
+
+
+Posts:
+
+Method	                Action
+GET/HEAD	      http://localhost:3000/posts/getPosts
+POST	          http://localhost:3000/posts/getPost
+POST	          http://localhost:3000/posts/createPost
+PUT	              http://localhost:3000/posts/updatePost
+DELETE	          http://localhost:3000/posts/deletePost
+
+
+Comments:
+
+Method	               Action
+GET/HEAD	      http://localhost:3000/comments/getComments
+GET/HEAD	      http://localhost:3000/comments/getComment
+POST	          http://localhost:3000/comments/createComment
+PUT	              http://localhost:3000/comments/updateComment
+DELETE	          http://localhost:3000/comments/deleteComment
+PUT	              http://localhost:3000/comments/likeComment
+

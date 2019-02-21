@@ -1,0 +1,7 @@
+{
+    "secret": "Accessment Test",
+    "refreshTokenSecret": "Accessment Test Refresh",
+    "port": 3000,
+    "tokenLife": 900,
+    "refreshTokenLife": 86400
+}
