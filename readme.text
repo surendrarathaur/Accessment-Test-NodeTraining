@@ -13,34 +13,109 @@ RESTful errors
 Routes List:
 
 Users:
+-----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 
-Method                  Action
-GET/HEAD	      http://localhost:3000/users/getUsers
-POST    	      http://localhost:3000/users/getUser
-POST	          http://localhost:3000/users/createUser
-PUT	              http://localhost:3000/users/updateUser
-DELETE	          http://localhost:3000/users/deleteUser
-POST	          http://localhost:3000/users/getUserComments
-POST    	      http://localhost:3000/users/getUserPosts
+Method                  Action                                                  Purpose
+
+GET/HEAD	      http://localhost:3000/users/getUsers                          GET All Users
+POST    	      http://localhost:3000/users/getUser                           Get Single User
+POST	          http://localhost:3000/users/createUser                        Create Single User
+PUT	              http://localhost:3000/users/updateUser                        Update Single User Profile
+DELETE	          http://localhost:3000/users/deleteUser                        Delete Single User
+POST	          http://localhost:3000/users/getUserComments                   Get Single User & Single Post all comments
+POST    	      http://localhost:3000/users/getUserPosts                      Get Single User all Posts 
 
 
 Posts:
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
-Method	                Action
-GET/HEAD	      http://localhost:3000/posts/getPosts
-POST	          http://localhost:3000/posts/getPost
-POST	          http://localhost:3000/posts/createPost
-PUT	              http://localhost:3000/posts/updatePost
-DELETE	          http://localhost:3000/posts/deletePost
+Method	                Action                                                  Purpose
+
+GET/HEAD	      http://localhost:3000/posts/getPosts                          Get all Posts
+POST	          http://localhost:3000/posts/getPost                           Get Single Post
+POST	          http://localhost:3000/posts/createPost                        Create Single Post
+PUT	              http://localhost:3000/posts/updatePost                        Update Single Post
+DELETE	          http://localhost:3000/posts/deletePost                        Delete Single Post
 
 
 Comments:
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
-Method	               Action
-GET/HEAD	      http://localhost:3000/comments/getComments
-GET/HEAD	      http://localhost:3000/comments/getComment
-POST	          http://localhost:3000/comments/createComment
-PUT	              http://localhost:3000/comments/updateComment
-DELETE	          http://localhost:3000/comments/deleteComment
-PUT	              http://localhost:3000/comments/likeComment
+Method	               Action                                                   Purpose
+
+GET/HEAD	      http://localhost:3000/comments/getComments                    Get All Comments
+GET/HEAD	      http://localhost:3000/comments/getComment                     Get Single Comments
+POST	          http://localhost:3000/comments/createComment                  Create Single comment on Post
+PUT	              http://localhost:3000/comments/updateComment                  Update Single comment on post
+DELETE	          http://localhost:3000/comments/deleteComment                  Delete Single comment
+PUT	              http://localhost:3000/comments/likeComment                    User like or dislike on post comment
+
+-------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
+Example Of Api call postman:
+
+1) http://localhost:3000/users/createUser
+
+Header Request:
+Key                             Value
+Content-Type                    application/json
+
+Body Request:
+
+Raw use JSON/(application/json)
+
+{
+  "username":"surendra",
+  "password":"admin",
+  "email":"surendrarathor87@gmail.com",
+  "firstname":"surendra",
+  "lastname":"rathaur",
+  "city":"ahmedabad",
+  "is_active":"1"
+}
+
+
+2) http://localhost:3000/users/login
+
+Header Request:
+Key                             Value
+Content-Type                    application/json
+
+Body Request:
+
+Raw use JSON/(application/json)
+
+{
+  "email":"surendrarathor87@gmail.com",
+  "password":"admin"
+}
+
+3) http://localhost:3000/posts/createPost
+
+Header Request:
+Key                             Value
+Content-Type                    application/json
+x-access-token                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNmU1ZWI1NTBjZTc4MTE1NGJiMGRhZSIsImlhdCI6MTU1MDczNzE2OCwiZXhwIjoxNTUwNzM4MDY4fQ.L0phFWDPb-MFYO0aMeCuNZE8OiV8rqWkYEieEwfEhjg
+
+Body Request:
+
+Raw use JSON/(application/json)
+
+{
+  "id":"5c6e5eb550ce781154bb0dae",
+  "post_title":"Test",
+  "post_content":"Test, How r you?",
+  "is_active":"1"
+}
+
+
+Thanks.....
+
+
+
+
 
